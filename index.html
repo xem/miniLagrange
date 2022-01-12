@@ -1,0 +1,28 @@
+<canvas id=a style="border:1px solid">
+<script>
+c=a.getContext("2d");
+p=[];
+a.onclick=e=>{
+  a.width^=0;
+  p.push([e.pageX,e.pageY]);
+  if(p.length>0){
+    for(x=0;x<320;x++){
+      y=0;
+      for(l=0;l<p.length;l++){
+        c.fillRect(p[l][0]-9,p[l][1]-9,4,4);
+        n=p[l][1];
+        d=1;
+        for(i=0;i<p.length;i++){
+          if(i!=l){
+            n*=(x-p[i][0]);
+            d*=(p[l][0]-p[i][0]);
+          }
+        }
+        y+=n/d;
+      }
+      c.lineTo(x-7,y-7,1,1);
+    }
+  }
+  c.stroke();
+}
+</script>
