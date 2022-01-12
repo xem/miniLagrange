@@ -1,28 +1,57 @@
-<canvas id=a style="border:1px solid">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2>MiniLagrange</h2>
+<p>A 298b app that draws a line that passes by all the points that are clicked.
+<p>Inspired by <a href="https://www.youtube.com/watch?v=4S6G-zenbFM">this video</a>
+<p>Fork me on <a href="//github.com/xem/miniLagrange">Github</a> !
+
+<!-- START CLEAN CODE -->
+
+<!-- 
+<canvas id=a>
 <script>
 c=a.getContext("2d");
-p=[];
-a.onclick=e=>{
-  a.width^=0;
-  p.push([e.pageX,e.pageY]);
-  if(p.length>0){
-    for(x=0;x<320;x++){
-      y=0;
-      for(l=0;l<p.length;l++){
-        c.fillRect(p[l][0]-9,p[l][1]-9,4,4);
-        n=p[l][1];
-        d=1;
-        for(i=0;i<p.length;i++){
-          if(i!=l){
-            n*=(x-p[i][0]);
-            d*=(p[l][0]-p[i][0]);
-          }
+p=[];                                       // list of points
+a.onclick=e=>{                              // on click
+  a.width^=0;                               // reset canvas
+  p.push([e.pageX,e.pageY]);                // add point in list
+  for(x=0;x<999;x++){                       // for all the x coordinates in the canvas
+    y=0;                                    // y coordinate to compute
+    for(l=0;l<p.length;l++){                // compute an equation for each point P:
+      c.fillRect(p[l][0]-2,p[l][1]-2,4,4);  // draw the point
+      n=p[l][1];                            // numerator = P.y
+      d=1;                                  // denominator = 1
+      for(i=0;i<p.length;i++){              // for every other point Q:
+        if(i!=l){                           // if Q != P:
+          n*=(x-p[i][0]);                   // multiply numerator with (x-P.x)
+          d*=(p[l][0]-p[i][0]);             // multiply denominator with (Q.x-P.x)
         }
-        y+=n/d;
       }
-      c.lineTo(x-7,y-7,1,1);
+      y+=n/d;                               // add equation (numerator/denominator) to y
     }
+    c.lineTo(x,y,1,1);                      // draw the curve up to (x,y)
   }
   c.stroke();
 }
 </script>
+-->
+
+<!-- END CLEAN CODE -->
+
+
+
+<!-- START GOLFING -->
+
+<canvas id=a><script>c=a.getContext`2d`,p=[],a.onclick=e=>{for(a.width^=0,p.push([e.pageX,e.pageY]),x=0;x<999;x++){for(y=0,l=0;l<(_=p.length);l++){for(c.fillRect(p[l][0]-2,p[l][1]-2,4,4),n=p[l][1],d=1,i=0;i<_;i++)i!=l&&(n*=x-p[i][0],d*=p[l][0]-p[i][0]);y+=n/d}c.lineTo(x,y,1,1)}c.stroke()}</script>
+
+<!-- END GOLFING -->
+
+<style>
+body { font-family: calibri }
+canvas { border:1px solid; top: 0; left: 0; position: fixed }
