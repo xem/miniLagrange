@@ -48,8 +48,8 @@ a.onclick=e=>{                              // on click
 
 <!-- START GOLFING -->
 
-<canvas id=a><script>c=a.getContext`2d`,P=p=[],onclick=e=>{for(a.width^=p[P++]=e,x=999;x--;c.fillRect(x,y,1,1))for(y=0,l=P;l--;y+=n)for(c.fillRect((Z=p[l].x)-2,(n=p[l].y)-2,4,4),i=P;i--;)i^l&&(n*=(x-(z=p[i].x))/(Z-z))}</script>
-
+<canvas id=a><script>c=a.getContext`2d`,P=p=[],onclick=e=>{for(x=a.width^=p[P++]=e;x--;c.fillRect(x,y,1,1))for(y=0,l=P;l--;y+=n)for(c.fillRect((Z=p[l].x)-2,(n=p[l].y)-2,4,4),i=P;i--;)n*=i-l?(x-(z=p[i].x))/(Z-z):1}</script>
+  
 <!-- END GOLFING -->
 
 <style>
