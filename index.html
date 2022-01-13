@@ -7,7 +7,7 @@
 <br>
 <br>
 <h2>MiniLagrange</h2>
-<p>A 255b app that draws a line that passes by all the points that are clicked.
+<p>A 253b app that draws a line that passes by all the points that are clicked.
 <p>Inspired by <a href="https://www.youtube.com/watch?v=4S6G-zenbFM">this video</a>
 <p>Fork me on <a href="//github.com/xem/miniLagrange">Github</a> !
 
@@ -48,7 +48,7 @@ a.onclick=e=>{                              // on click
 
 <!-- START GOLFING -->
 
-<canvas id=a><script>c=a.getContext`2d`,p=[],P=0,onclick=e=>{for(a.width^=p[P++]=[e.pageX,e.pageY],x=999;x--;){for(y=0,l=P;l--;){for(c.fillRect((Z=p[l][0])-2,(n=p[l][1])-2,4,4),i=P;i--;)i^l&&(n*=(x-(z=p[i][0]))/(Z-z));y+=n/1}c.fillRect(x,y,1,1)}}</script>
+<canvas id=a><script>c=a.getContext`2d`,p=[],P=0,onclick=e=>{for(a.width^=p[P++]=[e.pageX,e.pageY],x=999;x--;){for(y=0,l=P;l--;){for(c.fillRect((Z=p[l][0])-2,(n=p[l][1])-2,4,4),i=P;i--;)i^l&&(n*=(x-(z=p[i][0]))/(Z-z));y+=n}c.fillRect(x,y,1,1)}}</script>
 
 <!-- END GOLFING -->
 
