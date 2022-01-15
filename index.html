@@ -7,9 +7,29 @@
 <br>
 <br>
 <h2>MiniLagrange</h2>
-<p>A 183b app that draws a curve that passes by all the points that are clicked.
-<p>Inspired by <a href="https://www.youtube.com/watch?v=4S6G-zenbFM">this video</a>
-<p>Fork me on <a href="//github.com/xem/miniLagrange">Github</a> !
+<p>A 183b app that draws a curve that passes by all the points that are clicked. Inspired by <a href="https://www.youtube.com/watch?v=4S6G-zenbFM">this video</a>. Golfed by xem, xen, p01, aemkei, subzey. Fork me on <a href="//github.com/xem/miniLagrange">Github</a> !
+
+<p>Golf progress:
+<pre style="background:#555;color:#fff;font-size:10px;line-height:15px;padding:10px;width:95vw;overflow-x:auto">
+&lt;canvas id=a>&lt;script>c=a.getContext`2d`,p=[],a.onclick=e=>{for(a.width^=0,p.push([e.pageX,e.pageY]),x=0;x&lt;999;x++){for(y=0,l=0;l&lt;(_=p.length);l++){for(c.fillRect(p[l][0]-2,p[l][1]-2,4,4),n=p[l][1],d=1,i=0;i&lt;_;i++)i!=l&&(n*=x-p[i][0],d*=p[l][0]-p[i][0]);y+=n/d}c.lineTo(x,y,1,1)}c.stroke()}&lt;/script>
+&lt;canvas id=a>&lt;script>c=a.getContext`2d`,p=[],a.onclick=e=>{for(a.width^=x=0,p.push([e.pageX,e.pageY]);x&lt;999;x++){for(y=l=0;l&lt;(_=p.length);l++){for(c.fillRect(p[l][0]-2,p[l][1]-2,4,4),n=p[l][d=1],i=0;i&lt;_;i++)i!=l&&(n*=x-p[i][0],d*=p[l][0]-p[i][0]);y+=n/d}c.lineTo(x,y)}c.stroke()}&lt;/script>
+&lt;canvas id=a>&lt;script>c=a.getContext`2d`,p=[],P=0,onclick=e=>{for(a.width^=0,p[P++]=[e.pageX,e.pageY],x=999;x--;){for(y=0,l=P;l--;){for(c.fillRect(p[l][0]-2,p[l][1]-2,4,4),n=p[l][d=1],i=P;i--;)i^l&&(n*=x-p[i][0],d*=p[l][0]-p[i][0]);y+=n/d}c.lineTo(x,y)}c.stroke()}&lt;/script>
+&lt;canvas id=a>&lt;script>c=a.getContext`2d`,p=[],P=0,onclick=e=>{for(a.width^=0,p[P++]=[e.pageX,e.pageY],x=999;x--;){for(y=0,l=P;l--;){for(c.fillRect(p[l][0]-2,p[l][1]-2,4,4),n=p[l][1],i=P;i--;)i^l&&(n*=(x-p[i][0])/(p[l][0]-p[i][0]));y+=n/1}c.fillRect(x,y,1,1)}}&lt;/script>
+&lt;canvas id=a>&lt;script>c=a.getContext`2d`,p=[],P=0,onclick=e=>{for(a.width^=p[P++]=[e.pageX,e.pageY],x=999;x--;){for(y=0,l=P;l--;){for(c.fillRect((Z=p[l][0])-2,(n=p[l][1])-2,4,4),i=P;i--;)i^l&&(n*=(x-(z=p[i][0]))/(Z-z));y+=n/1}c.fillRect(x,y,1,1)}}&lt;/script>
+&lt;canvas id=a>&lt;script>c=a.getContext`2d`,p=[],P=0,onclick=e=>{for(a.width^=p[P++]=[e.pageX,e.pageY],x=999;x--;){for(y=0,l=P;l--;){for(c.fillRect((Z=p[l][0])-2,(n=p[l][1])-2,4,4),i=P;i--;)i^l&&(n*=(x-(z=p[i][0]))/(Z-z));y+=n}c.fillRect(x,y,1,1)}}&lt;/script>
+&lt;canvas id=a>&lt;script>c=a.getContext`2d`,P=p=[],onclick=e=>{for(a.width^=p[P++]=e,x=999;x--;c.fillRect(x,y,1,1))for(y=0,l=P;l--;y+=n)for(c.fillRect((Z=p[l].x)-2,(n=p[l].y)-2,4,4),i=P;i--;)i^l&&(n*=(x-(z=p[i].x))/(Z-z))}&lt;/script>
+&lt;canvas id=a>&lt;script>c=a.getContext`2d`,P=p=[],onclick=e=>{for(x=a.width^=p[P++]=e;x--;c.fillRect(x,y,1,1))for(y=0,l=P;l--;y+=n)for(c.fillRect((Z=p[l].x)-2,(n=p[l].y)-2,4,4),i=P;i--;)n*=i-l?(x-(z=p[i].x))/(Z-z):1}&lt;/script>
+&lt;canvas id=a onclick="with(a.getContext`2d`)for(a[0]||(P=0),x=a.width^=a[P++]=event;x--;fillRect(x,y,1,1))for(y=0,l=P;l--;y+=n)for(fillRect((Z=a[l].x)-2,(n=a[l].y)-2,4,4),i=P;i--;)n*=i-l?(x-(z=a[i].x))/(Z-z):1">
+&lt;canvas id=a onclick=with(a.getContext`2d`)for(P=a[0]?P:0,x=a.width^=a[P++]=event;x--;fillRect(x,y,1,1))for(y=0,l=P;l--;y+=n)for(fillRect((Z=a[l].x)-2,(n=a[l].y)-2,4,4),i=P;i--;)n*=i-l?(x-(z=a[i].x))/(Z-z):1>
+&lt;canvas id=a onclick=with(a.getContext`2d`)for(P=a[0]?P:0,x=a.width^=a[P++]=event;x--;fillRect(x,y,1,1))for(y=0,l=P;l--;y+=n)for(q=a[l],fillRect(q.x-2,(n=q.y)-2,4,4),i=P;i--;n*=i-l?(x-z)/(q.x-z):1)z=a[i].x>
+&lt;canvas id=a onclick=with(a.getContext`2d`)for(P=a[0]?P:0,X=a.width^=a[P++]=event;X--;fillRect(X,Y,1,1))for(Y=0,l=P;l--;Y+=y)for({x,y}=a[l],fillRect(x-2,y-2,4,4),i=P;i--;y*=i-l?(X-z)/(x-z):1)z=a[i].x>
+&lt;canvas id=a onclick=with(getContext`2d`)for(P=a[0]?P:0,X=width^=a[P++]=event;X--;fillRect(X,Y,1,1))for(Y=0,l=P;l--;Y+=y)for({x,y}=a[l],fillRect(x-2,y-2,4,4),i=P;i--;y*=i-l?(X-z)/(x-z):1)z=a[i].x>
+&lt;canvas onclick=with(a=getContext`2d`)for(P=a[0]?P:0,X=width^=a[P++]=event;X--;fillRect(X,Y,1,1))for(Y=0,l=P;l--;Y+=y)for({x,y}=a[l],fillRect(x-2,y-2,4,4),i=P;i--;y*=i-l?(X-z)/(x-z):1)z=a[i].x>
+&lt;canvas onclick=a=getContext`2d`;for(P=a[0]?P:0,X=width^=a[P++]=event;X--;a.fillRect(X,Y,1,1))for(Y=0,l=P;l--;Y+=y)for({x,y}=a[l],a.fillRect(x-2,y-2,4,4),i=P;i--;y*=i-l?(X-z)/(x-z):1)z=a[i].x>
+&lt;canvas onclick=a=getContext`2d`;for(P=a[0]?P:0,X=width^=a[P++]=event;X--;a[R](X,Y,1,1))for(Y=0,l=P;l--;Y+=y)for({x,y}=a[l],a[R="fillRect"](x-2,y-2,4,4),i=P;i--;y*=i-l?(X-z)/(x-z):1)z=a[i].x>
+&lt;canvas onclick=a=getContext`2d`;for(X=width^=a[id++]=event;X--;a.fillRect(X,Y,1,1))for(Y=0,l=id;l--;Y+=y)for({x,y}=a[l],a.fillRect(x-2,y-2,4,4),i=id;i--;y*=i-l?(X-z)/(x-z):1)z=a[i].x>
+&lt;canvas onclick=a=getContext`2d`;for(X=width^=a[id++]=event;X--;a[q](X,Y,1,1))for(Y=0,l=id;l--;Y+=y)for({x,y}=a[l],a[q=`fillRect`](x-2,y-2,5,5),i=id;i--;y*=i-l?(X-z)/(x-z):1)z=a[i].x>
+</pre>
 
 <!-- START CLEAN CODE -->
 
@@ -54,6 +74,6 @@ a.onclick=e=>{                              // on click
 
 <style>
 body { font-family: calibri }
-canvas { border:1px solid; top: 0; left: 0; position: fixed }
+canvas { border:1px solid; top: 0; left: 0; position: absolute }
 
 
